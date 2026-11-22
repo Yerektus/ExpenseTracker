@@ -38,7 +38,19 @@ versions are not pinned, and the documentation has drifted from the repo (Node v
 - Logging for API errors
 
 ## After mitigations (fill in after Task 07)
-- Level: ...  Changes: ...
+- Level: **2 — Documented** (unchanged).  Changes: lint configured and passing; frontend tests 3 → 8; AGENTS.md and
+  README updated (details in `task-07/mitigations.md`; not committed yet at the time of writing).
+
+| # | Criterion | Before | After Task 07 | Evidence (real output, 2026-11-22) |
+|---|---|---|---|---|
+| 5 | Tests | Partial | Partial (improved) | `npm test` → Test Files 4 passed (4), Tests 8 passed (8); delete, delete/save errors, filter and «Повторить» now covered; still no `api.js` / `ThemeSwitcher` tests, no coverage tooling, no CI |
+| 6 | Lint / type checks | Fail | Partial | `ruff check .` → `All checks passed!`; `npm run lint` → exit 0; type checks (mypy) still missing |
+| 2 | README accuracy | Partial | Partial | Lint commands and new files documented; Node requirement still says 20.19+ |
+| 10 | AGENTS.md | Partial | Partial (improved) | Baselines re-measured (4 files / 8 tests, lint rows), lint rules added; HeroUI block still conflicts with §8 |
+
+Still missing for level 3: CI that runs tests, lint and build on every change; type checks; pinned runtimes
+(`.nvmrc` / `.python-version`) and locked Python sub-dependencies; README Node requirement fixed; clean-clone
+verification with `npm ci` on a machine with system Node ≥ 22.12; logging for API errors.
 
 ---
 

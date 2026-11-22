@@ -1,0 +1,3 @@
+# Ruff — линтер Python. Запуск из папки backend: ruff check .
+# Набор правил — стандартный для ruff (pycodestyle E4/E7/E9 + Pyflakes F).
+target-version = "py311"

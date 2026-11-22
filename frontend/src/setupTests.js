@@ -13,3 +13,12 @@ if (!window.matchMedia) {
     dispatchEvent: () => false,
   });
 }
+
+// jsdom не реализует ResizeObserver, а он нужен Toast из HeroUI (уведомления в App).
+if (!window.ResizeObserver) {
+  window.ResizeObserver = class {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  };
+}
