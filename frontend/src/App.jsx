@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Alert,
   Button,
@@ -34,28 +34,51 @@ export default function App() {
   const [editingExpense, setEditingExpense] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
+  // Увеличивается, когда данные нужно загрузить заново (после сохранения, удаления, «Повторить»).
+  const [reloadCount, setReloadCount] = useState(0);
 
-  const loadData = useCallback(async () => {
+  // Загрузка списка и сводки. Состояние меняется только в колбэках промиса,
+  // а ответ устаревшего запроса (фильтр уже сменился) игнорируется.
+  // isLoading и error перед загрузкой выставляют обработчики (или начальное состояние).
+  useEffect(() => {
+    let ignore = false;
+    const category = categoryFilter === ALL_CATEGORIES ? "" : categoryFilter;
+    Promise.all([fetchExpenses(category), fetchSummary()])
+      .then(([expenseList, summaryData]) => {
+        if (!ignore) {
+          setExpenses(expenseList);
+          setSummary(summaryData);
+        }
+      })
+      .catch((loadError) => {
+        if (!ignore) {
+          setError(loadError.message);
+        }
+      })
+      .finally(() => {
+        if (!ignore) {
+          setIsLoading(false);
+        }
+      });
+    return () => {
+      ignore = true;
+    };
+  }, [categoryFilter, reloadCount]);
+
+  function reloadData() {
     setIsLoading(true);
     setError("");
-    try {
-      const category = categoryFilter === ALL_CATEGORIES ? "" : categoryFilter;
-      const [expenseList, summaryData] = await Promise.all([
-        fetchExpenses(category),
-        fetchSummary(),
-      ]);
-      setExpenses(expenseList);
-      setSummary(summaryData);
-    } catch (loadError) {
-      setError(loadError.message);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [categoryFilter]);
+    setReloadCount((count) => count + 1);
+  }
 
-  useEffect(() => {
-    loadData();
-  }, [loadData]);
+  function handleFilterChange(value) {
+    if (value === categoryFilter) {
+      return;
+    }
+    setIsLoading(true);
+    setError("");
+    setCategoryFilter(value);
+  }
 
   // Ошибка сохранения пробрасывается дальше — её показывает сама форма.
   async function handleSave(expenseData) {
@@ -67,7 +90,7 @@ export default function App() {
       await createExpense(expenseData);
       toast.success("Расход добавлен");
     }
-    await loadData();
+    reloadData();
   }
 
   async function handleDelete(expense) {
@@ -77,7 +100,7 @@ export default function App() {
         setEditingExpense(null);
       }
       toast.success("Расход удалён");
-      await loadData();
+      reloadData();
     } catch (deleteError) {
       toast.danger("Не удалось удалить расход", { description: deleteError.message });
     }
@@ -112,7 +135,7 @@ export default function App() {
               <Alert.Title>Не удалось загрузить данные</Alert.Title>
               <Alert.Description>{error}</Alert.Description>
             </Alert.Content>
-            <Button size="sm" variant="danger-soft" onPress={loadData} isPending={isLoading}>
+            <Button size="sm" variant="danger-soft" onPress={reloadData} isPending={isLoading}>
               <ArrowRotateLeft />
               Повторить
             </Button>
@@ -145,7 +168,7 @@ export default function App() {
                 className="w-full sm:w-56"
                 variant="secondary"
                 value={categoryFilter}
-                onChange={(value) => setCategoryFilter(value)}
+                onChange={handleFilterChange}
               >
                 <Select.Trigger>
                   <Select.Value />

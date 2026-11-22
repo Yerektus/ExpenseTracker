@@ -36,6 +36,7 @@
 │   │   └── test_expenses.py   # тесты API и расчёта сводки
 │   ├── seed.py                # заполняет базу 10 вымышленными расходами
 │   ├── pytest.ini
+│   ├── ruff.toml              # настройки линтера ruff
 │   └── requirements.txt
 ├── frontend/
 │   ├── src/
@@ -46,7 +47,9 @@
 │   │   │   └── ThemeSwitcher.jsx
 │   │   ├── __tests__/
 │   │   │   ├── App.test.jsx
-│   │   │   └── ExpenseForm.test.jsx
+│   │   │   ├── ExpenseActions.test.jsx
+│   │   │   ├── ExpenseForm.test.jsx
+│   │   │   └── Summary.test.jsx
 │   │   ├── App.jsx
 │   │   ├── api.js             # запросы к backend
 │   │   ├── categories.js      # категории, форматирование сумм и дат
@@ -54,6 +57,7 @@
 │   │   ├── main.jsx           # точка входа, I18nProvider (локаль ru-RU)
 │   │   └── setupTests.js
 │   ├── index.html
+│   ├── eslint.config.js       # настройки линтера ESLint
 │   ├── package.json
 │   ├── package-lock.json
 │   └── vite.config.js
@@ -167,6 +171,14 @@ pytest
 
 Тесты используют отдельную временную SQLite-базу и не затрагивают `expenses.db`.
 
+### Линтер
+
+```bash
+ruff check .
+```
+
+Ruff устанавливается вместе с остальными зависимостями из `requirements.txt`; настройки — в `ruff.toml`.
+
 ## Frontend
 
 Интерфейс построен по рекомендациям [HeroUI v3](https://heroui.com/docs/react/getting-started)
@@ -225,6 +237,14 @@ npm run dev
 ```bash
 npm test
 ```
+
+### Линтер
+
+```bash
+npm run lint
+```
+
+ESLint проверяет код по правилам `@eslint/js` и `eslint-plugin-react-hooks`; настройки — в `eslint.config.js`.
 
 ### Сборка
 

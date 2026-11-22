@@ -1,5 +1,5 @@
 import { Card, Label, Meter, Separator, Skeleton } from "@heroui/react";
-import { CATEGORIES, formatAmount } from "../categories.js";
+import { formatAmount, getCategory } from "../categories.js";
 
 export default function Summary({ summary }) {
   if (!summary) {
@@ -14,11 +14,11 @@ export default function Summary({ summary }) {
     );
   }
 
+  // Какие категории показывать, решает сервер; categories.js даёт только подпись и цвет.
   // Категории с наибольшими расходами — наверху.
-  const rows = CATEGORIES.map((category) => ({
-    ...category,
-    amount: summary.by_category[category.value] ?? 0,
-  })).sort((a, b) => b.amount - a.amount);
+  const rows = Object.entries(summary.by_category)
+    .map(([value, amount]) => ({ ...getCategory(value), amount }))
+    .sort((a, b) => b.amount - a.amount);
 
   return (
     <Card>
