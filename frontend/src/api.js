@@ -56,3 +56,8 @@ export function deleteExpense(id) {
 export function fetchSummary() {
   return request("/summary");
 }
+
+export function fetchBudgetCheck({ month, category, limit }) {
+  const query = new URLSearchParams({ month, category, limit: String(limit) });
+  return request(`/budget-check?${query}`);
+}

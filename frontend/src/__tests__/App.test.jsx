@@ -5,6 +5,7 @@ import { fetchExpenses, fetchSummary } from "../api.js";
 vi.mock("../api.js", () => ({
   fetchExpenses: vi.fn(),
   fetchSummary: vi.fn(),
+  fetchBudgetCheck: vi.fn(),
   createExpense: vi.fn(),
   updateExpense: vi.fn(),
   deleteExpense: vi.fn(),

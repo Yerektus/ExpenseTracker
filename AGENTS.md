@@ -24,6 +24,7 @@ readable and well tested. All data in the repo is fictional.
 ├── AGENTS.md                  # this file (+ generated HeroUI docs index at the end)
 ├── DESIGN.md                  # HeroUI default-theme design contract — read before any UI work
 ├── README.md                  # human docs (in Russian)
+├── docs/                      # course reports and AI evidence: assignment-05/, assignment-06/ (not app code)
 ├── .env.example               # optional env vars (DATABASE_URL, CORS_ORIGINS, VITE_API_URL)
 ├── .gitignore                 # ignores .env, *.db, .venv/, node_modules/, dist/, .heroui-docs/ …
 ├── .heroui-docs/              # local HeroUI v3 docs (git-ignored; may be missing in a fresh clone)
@@ -33,13 +34,13 @@ readable and well tested. All data in the repo is fictional.
 │   │   ├── config.py          # loads <repo>/.env via python-dotenv; DATABASE_URL, CORS_ORIGINS
 │   │   ├── database.py        # engine, SessionLocal, Base (DeclarativeBase), get_db() dependency
 │   │   ├── models.py          # ORM model Expense (id, amount, category, description, date)
-│   │   ├── schemas.py         # Pydantic v2: Category (StrEnum), ExpenseCreate/Update/Read, Summary
-│   │   ├── crud.py            # DB operations + calculate_summary() (pure business logic)
+│   │   ├── schemas.py         # Pydantic v2: Category (StrEnum), ExpenseCreate/Update/Read, Summary, BudgetCheckQuery/BudgetCheck
+│   │   ├── crud.py            # DB operations + calculate_summary(), calculate_budget_check() (pure business logic)
 │   │   └── routers/
-│   │       └── expenses.py    # /api/expenses (GET, POST, PUT, DELETE), /api/summary, 404 helper
+│   │       └── expenses.py    # /api/expenses (GET, POST, PUT, DELETE), /api/summary, /api/budget-check (GET), 404 helper
 │   ├── tests/
 │   │   ├── conftest.py        # `client` fixture (isolated SQLite per test), `create_expense` factory
-│   │   └── test_expenses.py   # 8 tests: API CRUD, 422, 404, summary, calculate_summary unit test
+│   │   └── test_expenses.py   # 30 tests: API CRUD, 422, 404, summary, budget check, pure-function unit tests
 │   ├── seed.py                # DELETES all expenses, then inserts 10 fictional ones
 │   ├── pytest.ini             # pythonpath = . ; testpaths = tests
 │   ├── ruff.toml              # ruff linter: default rules (E4/E7/E9/F), target py311
@@ -52,17 +53,20 @@ readable and well tested. All data in the repo is fictional.
     └── src/
         ├── main.jsx           # entry: StrictMode + HeroUI I18nProvider locale="ru-RU"
         ├── index.css          # ONLY: @import "tailwindcss"; @import "@heroui/styles";
-        ├── App.jsx            # page state: load data, save/delete handlers, filter, toasts, layout
+        ├── App.jsx            # page state: load data, save/delete handlers, filter, budget check, toasts, layout
         ├── api.js             # the ONLY place with fetch(); base URL from VITE_API_URL
-        ├── categories.js      # category list/labels/colors + formatAmount() / formatDate()
+        ├── categories.js      # category list/labels/colors + formatAmount() / formatDate() / formatPercent()
         ├── setupTests.js      # jest-dom matchers + jsdom stubs: window.matchMedia, ResizeObserver
         ├── components/
+        │   ├── BudgetCheck.jsx    # budget check form + result card, client-side validateBudgetInput()
         │   ├── ExpenseForm.jsx    # create/edit form, client-side validate()
         │   ├── ExpenseList.jsx    # Table, row actions, delete AlertDialog, skeleton, empty state
         │   ├── Summary.jsx        # totals card with Meter bars
         │   └── ThemeSwitcher.jsx  # light / dark / system via HeroUI useTheme
         └── __tests__/
             ├── App.test.jsx            # error Alert when the API fails (api.js mocked)
+            ├── BudgetCheck.test.jsx    # budget form validation and result rendering
+            ├── BudgetCheckApp.test.jsx # budget check via App: recompute after add, server error, repeat
             ├── ExpenseActions.test.jsx # delete, delete/save errors, filter, «Повторить» (api.js mocked)
             ├── ExpenseForm.test.jsx    # edit mode submits changed data
             └── Summary.test.jsx        # summary rows come from the server response
@@ -74,6 +78,7 @@ readable and well tested. All data in the repo is fictional.
 React component ──> src/api.js (fetch, JSON) ──HTTP /api/*──> routers/expenses.py
    ──> Pydantic schemas validate input ──> crud.py ──> SQLAlchemy models ──> SQLite
 GET /api/summary: crud.get_summary() ──> list_expenses() ──> calculate_summary() (pure)
+GET /api/budget-check: crud.get_budget_check() ──> list_expenses_in_month() ──> calculate_budget_check() (pure)
 ```
 
 ### Where each kind of logic must live
@@ -84,6 +89,7 @@ GET /api/summary: crud.get_summary() ──> list_expenses() ──> calculate_s
 | HTTP routing, status codes, 404 | `backend/app/routers/expenses.py` | `get_expense_or_404()`; DELETE returns 204 |
 | Database access | `backend/app/crud.py` | routers never build SQL queries themselves |
 | Business logic (summary) | `crud.calculate_summary()` | pure function, no DB; all categories present, sums rounded to 2 decimals |
+| Business logic (budget check) | `crud.calculate_budget_check()` | pure function, no DB; status thresholds compared in whole cents |
 | Settings / env vars | `backend/app/config.py` | nothing else reads `os.environ` |
 | HTTP calls from the UI | `frontend/src/api.js` | components never call `fetch` directly |
 | Category list, labels, colors, formatting | `frontend/src/categories.js` | values must match backend `Category` |
@@ -146,9 +152,9 @@ The agent may run these without asking. Results below are the actual baseline ou
 
 | Command | Baseline result | Side effects |
 |---|---|---|
-| `cd backend && source .venv/bin/activate && pytest -q` | `8 passed, 1 warning in 0.08s` | writes `.pytest_cache/`, `__pycache__/` (git-ignored) |
+| `cd backend && source .venv/bin/activate && pytest -q` | `30 passed, 1 warning in 0.32s` | writes `.pytest_cache/`, `__pycache__/` (git-ignored) |
 | `cd backend && source .venv/bin/activate && ruff check .` | `All checks passed!`, exit 0 | writes `backend/.ruff_cache/` (ignored by its own `.gitignore`) |
-| `cd frontend && npm test` (`vitest run`) | `Test Files 4 passed (4)`, `Tests 8 passed (8)` | none |
+| `cd frontend && npm test` (`vitest run`) | `Test Files 6 passed (6)`, `Tests 17 passed (17)` | none |
 | `cd frontend && npm run lint` (`eslint .`) | no output, exit 0 | none |
 | `cd frontend && npm run build` (`vite build`) | `✓ built`, exit 0, with a chunk-size warning | writes `frontend/dist/` (git-ignored) |
 | `git status`, `git diff`, `git log`, `git branch` | — | read-only |

@@ -1,0 +1,1945 @@
+{
+    "artifactJsonType": "APPLICATION",
+    "clientSchemaVersion": 2.0,
+    "serverSchemaVersion": 13.0,
+    "exportedApplication": {
+        "name": "Budget check (cloud)",
+        "isPublic": false,
+        "pages": [
+            {
+                "id": "Page1",
+                "isDefault": true
+            }
+        ],
+        "publishedPages": [
+            {
+                "id": "Page1",
+                "isDefault": true
+            }
+        ],
+        "viewMode": false,
+        "appIsExample": false,
+        "unreadCommentThreads": 0.0,
+        "color": "#F1DEFF",
+        "slug": "budget-check-cloud",
+        "unpublishedCustomJSLibs": [],
+        "publishedCustomJSLibs": [],
+        "evaluationVersion": 2.0,
+        "applicationVersion": 2.0,
+        "collapseInvisibleWidgets": true,
+        "isManualUpdate": false,
+        "deleted": false
+    },
+    "datasourceList": [],
+    "customJSLibList": [],
+    "pageList": [
+        {
+            "unpublishedPage": {
+                "name": "Page1",
+                "slug": "page1",
+                "layouts": [
+                    {
+                        "viewMode": false,
+                        "dsl": {
+                            "widgetName": "MainContainer",
+                            "backgroundColor": "none",
+                            "rightColumn": 1224.0,
+                            "snapColumns": 64,
+                            "detachFromLayout": true,
+                            "widgetId": "0",
+                            "topRow": 0.0,
+                            "bottomRow": 900,
+                            "containerStyle": "none",
+                            "snapRows": 33.0,
+                            "parentRowSpace": 1.0,
+                            "type": "CANVAS_WIDGET",
+                            "canExtend": true,
+                            "version": 95,
+                            "minHeight": 1292.0,
+                            "dynamicTriggerPathList": [],
+                            "parentColumnSpace": 1.0,
+                            "dynamicBindingPathList": [],
+                            "leftColumn": 0.0,
+                            "children": [
+                                {
+                                    "widgetName": "TitleText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "fc158a054f",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 1,
+                                    "bottomRow": 5,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 1,
+                                    "mobileBottomRow": 5,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "95b1f41403",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Проверка бюджета",
+                                    "fontSize": "1.25rem",
+                                    "fontStyle": "BOLD",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#231F20",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "SubtitleText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "4af78a2da4",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 5,
+                                    "bottomRow": 9,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 5,
+                                    "mobileBottomRow": 9,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "60cfe904a9",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Сколько потрачено в категории за месяц · демо-данные: встроенная копия тестового набора, без бэкенда",
+                                    "fontSize": "0.875rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#71717A",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "MonthInput",
+                                    "type": "INPUT_WIDGET_V2",
+                                    "widgetId": "162be7eedc",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 2,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 10,
+                                    "bottomRow": 17,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 10,
+                                    "mobileBottomRow": 17,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "e2fa75899b",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "inputType": "TEXT",
+                                    "label": "Месяц",
+                                    "labelPosition": "Top",
+                                    "labelAlignment": "left",
+                                    "labelWidth": 5,
+                                    "labelTextSize": "0.875rem",
+                                    "placeholderText": "ГГГГ-ММ",
+                                    "defaultText": "",
+                                    "isRequired": false,
+                                    "isDisabled": false,
+                                    "resetOnSubmit": false,
+                                    "autoFocus": false,
+                                    "allowFormatting": false,
+                                    "showStepArrows": false,
+                                    "iconAlign": "left",
+                                    "accentColor": "#553DE9",
+                                    "borderRadius": "0.375rem",
+                                    "boxShadow": "none",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000,
+                                    "validation": true,
+                                    "isSpellCheck": false
+                                },
+                                {
+                                    "widgetName": "MonthError",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "fa306115a9",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 17,
+                                    "bottomRow": 21,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 17,
+                                    "mobileBottomRow": 21,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "5e6c7e4258",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "{{appsmith.store.budgetErrors?.month ?? \"\"}}",
+                                    "fontSize": "0.875rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#DC2626",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "CategorySelect",
+                                    "type": "SELECT_WIDGET",
+                                    "widgetId": "6522c234aa",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 22,
+                                    "bottomRow": 29,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 22,
+                                    "mobileBottomRow": 29,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "33d0992623",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "labelText": "Категория",
+                                    "labelPosition": "Top",
+                                    "labelAlignment": "left",
+                                    "labelWidth": 5,
+                                    "labelTextSize": "0.875rem",
+                                    "sourceData": [
+                                        {
+                                            "label": "Еда",
+                                            "value": "food"
+                                        },
+                                        {
+                                            "label": "Транспорт",
+                                            "value": "transport"
+                                        },
+                                        {
+                                            "label": "Развлечения",
+                                            "value": "entertainment"
+                                        },
+                                        {
+                                            "label": "Коммунальные услуги",
+                                            "value": "utilities"
+                                        },
+                                        {
+                                            "label": "Другое",
+                                            "value": "other"
+                                        }
+                                    ],
+                                    "optionLabel": "label",
+                                    "optionValue": "value",
+                                    "defaultOptionValue": "food",
+                                    "placeholderText": "Категория",
+                                    "isFilterable": false,
+                                    "serverSideFiltering": false,
+                                    "isRequired": false,
+                                    "isDisabled": false,
+                                    "accentColor": "#553DE9",
+                                    "borderRadius": "0.375rem",
+                                    "boxShadow": "none",
+                                    "responsiveBehavior": "fill",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "LimitInput",
+                                    "type": "INPUT_WIDGET_V2",
+                                    "widgetId": "da08843a9d",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 2,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 30,
+                                    "bottomRow": 37,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 30,
+                                    "mobileBottomRow": 37,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "7d2bfd322f",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "inputType": "NUMBER",
+                                    "label": "Лимит на месяц",
+                                    "labelPosition": "Top",
+                                    "labelAlignment": "left",
+                                    "labelWidth": 5,
+                                    "labelTextSize": "0.875rem",
+                                    "placeholderText": "0.00",
+                                    "defaultText": "",
+                                    "isRequired": false,
+                                    "isDisabled": false,
+                                    "resetOnSubmit": false,
+                                    "autoFocus": false,
+                                    "allowFormatting": false,
+                                    "showStepArrows": false,
+                                    "iconAlign": "left",
+                                    "accentColor": "#553DE9",
+                                    "borderRadius": "0.375rem",
+                                    "boxShadow": "none",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000,
+                                    "validation": true,
+                                    "isSpellCheck": false
+                                },
+                                {
+                                    "widgetName": "LimitError",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "f43b09cd5c",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 37,
+                                    "bottomRow": 41,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 37,
+                                    "mobileBottomRow": 41,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "a9e3cf8751",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "{{appsmith.store.budgetErrors?.limit ?? \"\"}}",
+                                    "fontSize": "0.875rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#DC2626",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "CheckButton",
+                                    "type": "BUTTON_WIDGET",
+                                    "widgetId": "1d5c980cea",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 42,
+                                    "bottomRow": 46,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 42,
+                                    "mobileBottomRow": 46,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "c0c9746c5c",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [
+                                        {
+                                            "key": "onClick"
+                                        }
+                                    ],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Проверить",
+                                    "onClick": "{{Budget.check()}}",
+                                    "buttonColor": "#553DE9",
+                                    "buttonVariant": "PRIMARY",
+                                    "placement": "CENTER",
+                                    "isDisabled": false,
+                                    "isDefaultClickDisabled": true,
+                                    "recaptchaType": "V3",
+                                    "disabledWhenInvalid": false,
+                                    "resetFormOnClick": false,
+                                    "borderRadius": "0.375rem",
+                                    "boxShadow": "none",
+                                    "responsiveBehavior": "hug"
+                                },
+                                {
+                                    "widgetName": "ErrorText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "d8bde0930b",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetError}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 47,
+                                    "bottomRow": 53,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 47,
+                                    "mobileBottomRow": 53,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "433ec28b42",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Не удалось проверить бюджет. {{appsmith.store.budgetError}}",
+                                    "fontSize": "0.875rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#DC2626",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "ResultHeader",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "1f6c30d56a",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 54,
+                                    "bottomRow": 58,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 54,
+                                    "mobileBottomRow": 58,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "03ecdfa3f2",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "{{CategorySelect.selectedOptionLabel}}, {{appsmith.store.budgetResult?.month}}",
+                                    "fontSize": "0.875rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#71717A",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "StatusText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "a7bb7d627d",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 58,
+                                    "bottomRow": 62,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 58,
+                                    "mobileBottomRow": 62,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "4f69f8dd93",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        },
+                                        {
+                                            "key": "textColor"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "{{Budget.STATUSES[appsmith.store.budgetResult?.status]?.label}}",
+                                    "fontSize": "1rem",
+                                    "fontStyle": "BOLD",
+                                    "textAlign": "LEFT",
+                                    "textColor": "{{Budget.STATUSES[appsmith.store.budgetResult?.status]?.color}}",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "UsedProgress",
+                                    "type": "PROGRESS_WIDGET",
+                                    "widgetId": "5c62aa8174",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 62,
+                                    "bottomRow": 66,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 62,
+                                    "mobileBottomRow": 66,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "a08e8d434d",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "progress"
+                                        },
+                                        {
+                                            "key": "fillColor"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "progressType": "linear",
+                                    "progress": "{{Math.min(appsmith.store.budgetResult?.percent_used ?? 0, 100)}}",
+                                    "showResult": false,
+                                    "steps": 1,
+                                    "isIndeterminate": false,
+                                    "fillColor": "{{Budget.STATUSES[appsmith.store.budgetResult?.status]?.color}}",
+                                    "counterClockwise": false,
+                                    "borderRadius": "0.375rem"
+                                },
+                                {
+                                    "widgetName": "PercentText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "bb5a31c246",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 66,
+                                    "bottomRow": 70,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 66,
+                                    "mobileBottomRow": 70,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "65698a5efd",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Использовано: {{Budget.formatPercent(appsmith.store.budgetResult?.percent_used ?? 0)}}",
+                                    "fontSize": "1rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#231F20",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "SpentText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "e9aa51ddac",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 70,
+                                    "bottomRow": 74,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 70,
+                                    "mobileBottomRow": 74,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "c11d126902",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Потрачено: {{Budget.formatAmount(appsmith.store.budgetResult?.spent ?? 0)}}",
+                                    "fontSize": "1rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#231F20",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "RemainingText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "7f6f5166de",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 74,
+                                    "bottomRow": 78,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 74,
+                                    "mobileBottomRow": 78,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "984306e5aa",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Осталось: {{Budget.formatAmount(appsmith.store.budgetResult?.remaining ?? 0)}}",
+                                    "fontSize": "1rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#231F20",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                }
+                            ]
+                        },
+                        "validOnPageLoadActions": true,
+                        "id": "Page1",
+                        "deleted": false,
+                        "policies": [],
+                        "userPermissions": [],
+                        "layoutOnLoadActions": []
+                    }
+                ],
+                "userPermissions": [],
+                "policyMap": {}
+            },
+            "publishedPage": {
+                "name": "Page1",
+                "slug": "page1",
+                "layouts": [
+                    {
+                        "viewMode": false,
+                        "dsl": {
+                            "widgetName": "MainContainer",
+                            "backgroundColor": "none",
+                            "rightColumn": 1224.0,
+                            "snapColumns": 64,
+                            "detachFromLayout": true,
+                            "widgetId": "0",
+                            "topRow": 0.0,
+                            "bottomRow": 900,
+                            "containerStyle": "none",
+                            "snapRows": 33.0,
+                            "parentRowSpace": 1.0,
+                            "type": "CANVAS_WIDGET",
+                            "canExtend": true,
+                            "version": 95,
+                            "minHeight": 1292.0,
+                            "dynamicTriggerPathList": [],
+                            "parentColumnSpace": 1.0,
+                            "dynamicBindingPathList": [],
+                            "leftColumn": 0.0,
+                            "children": [
+                                {
+                                    "widgetName": "TitleText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "fc158a054f",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 1,
+                                    "bottomRow": 5,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 1,
+                                    "mobileBottomRow": 5,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "95b1f41403",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Проверка бюджета",
+                                    "fontSize": "1.25rem",
+                                    "fontStyle": "BOLD",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#231F20",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "SubtitleText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "4af78a2da4",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 5,
+                                    "bottomRow": 9,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 5,
+                                    "mobileBottomRow": 9,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "60cfe904a9",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Сколько потрачено в категории за месяц · демо-данные: встроенная копия тестового набора, без бэкенда",
+                                    "fontSize": "0.875rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#71717A",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "MonthInput",
+                                    "type": "INPUT_WIDGET_V2",
+                                    "widgetId": "162be7eedc",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 2,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 10,
+                                    "bottomRow": 17,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 10,
+                                    "mobileBottomRow": 17,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "e2fa75899b",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "inputType": "TEXT",
+                                    "label": "Месяц",
+                                    "labelPosition": "Top",
+                                    "labelAlignment": "left",
+                                    "labelWidth": 5,
+                                    "labelTextSize": "0.875rem",
+                                    "placeholderText": "ГГГГ-ММ",
+                                    "defaultText": "",
+                                    "isRequired": false,
+                                    "isDisabled": false,
+                                    "resetOnSubmit": false,
+                                    "autoFocus": false,
+                                    "allowFormatting": false,
+                                    "showStepArrows": false,
+                                    "iconAlign": "left",
+                                    "accentColor": "#553DE9",
+                                    "borderRadius": "0.375rem",
+                                    "boxShadow": "none",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000,
+                                    "validation": true,
+                                    "isSpellCheck": false
+                                },
+                                {
+                                    "widgetName": "MonthError",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "fa306115a9",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 17,
+                                    "bottomRow": 21,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 17,
+                                    "mobileBottomRow": 21,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "5e6c7e4258",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "{{appsmith.store.budgetErrors?.month ?? \"\"}}",
+                                    "fontSize": "0.875rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#DC2626",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "CategorySelect",
+                                    "type": "SELECT_WIDGET",
+                                    "widgetId": "6522c234aa",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 22,
+                                    "bottomRow": 29,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 22,
+                                    "mobileBottomRow": 29,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "33d0992623",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "labelText": "Категория",
+                                    "labelPosition": "Top",
+                                    "labelAlignment": "left",
+                                    "labelWidth": 5,
+                                    "labelTextSize": "0.875rem",
+                                    "sourceData": [
+                                        {
+                                            "label": "Еда",
+                                            "value": "food"
+                                        },
+                                        {
+                                            "label": "Транспорт",
+                                            "value": "transport"
+                                        },
+                                        {
+                                            "label": "Развлечения",
+                                            "value": "entertainment"
+                                        },
+                                        {
+                                            "label": "Коммунальные услуги",
+                                            "value": "utilities"
+                                        },
+                                        {
+                                            "label": "Другое",
+                                            "value": "other"
+                                        }
+                                    ],
+                                    "optionLabel": "label",
+                                    "optionValue": "value",
+                                    "defaultOptionValue": "food",
+                                    "placeholderText": "Категория",
+                                    "isFilterable": false,
+                                    "serverSideFiltering": false,
+                                    "isRequired": false,
+                                    "isDisabled": false,
+                                    "accentColor": "#553DE9",
+                                    "borderRadius": "0.375rem",
+                                    "boxShadow": "none",
+                                    "responsiveBehavior": "fill",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "LimitInput",
+                                    "type": "INPUT_WIDGET_V2",
+                                    "widgetId": "da08843a9d",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 2,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 30,
+                                    "bottomRow": 37,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 30,
+                                    "mobileBottomRow": 37,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "7d2bfd322f",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "inputType": "NUMBER",
+                                    "label": "Лимит на месяц",
+                                    "labelPosition": "Top",
+                                    "labelAlignment": "left",
+                                    "labelWidth": 5,
+                                    "labelTextSize": "0.875rem",
+                                    "placeholderText": "0.00",
+                                    "defaultText": "",
+                                    "isRequired": false,
+                                    "isDisabled": false,
+                                    "resetOnSubmit": false,
+                                    "autoFocus": false,
+                                    "allowFormatting": false,
+                                    "showStepArrows": false,
+                                    "iconAlign": "left",
+                                    "accentColor": "#553DE9",
+                                    "borderRadius": "0.375rem",
+                                    "boxShadow": "none",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000,
+                                    "validation": true,
+                                    "isSpellCheck": false
+                                },
+                                {
+                                    "widgetName": "LimitError",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "f43b09cd5c",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 37,
+                                    "bottomRow": 41,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 37,
+                                    "mobileBottomRow": 41,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "a9e3cf8751",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "{{appsmith.store.budgetErrors?.limit ?? \"\"}}",
+                                    "fontSize": "0.875rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#DC2626",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "CheckButton",
+                                    "type": "BUTTON_WIDGET",
+                                    "widgetId": "1d5c980cea",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": true,
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 42,
+                                    "bottomRow": 46,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 42,
+                                    "mobileBottomRow": 46,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "c0c9746c5c",
+                                    "dynamicBindingPathList": [],
+                                    "dynamicTriggerPathList": [
+                                        {
+                                            "key": "onClick"
+                                        }
+                                    ],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Проверить",
+                                    "onClick": "{{Budget.check()}}",
+                                    "buttonColor": "#553DE9",
+                                    "buttonVariant": "PRIMARY",
+                                    "placement": "CENTER",
+                                    "isDisabled": false,
+                                    "isDefaultClickDisabled": true,
+                                    "recaptchaType": "V3",
+                                    "disabledWhenInvalid": false,
+                                    "resetFormOnClick": false,
+                                    "borderRadius": "0.375rem",
+                                    "boxShadow": "none",
+                                    "responsiveBehavior": "hug"
+                                },
+                                {
+                                    "widgetName": "ErrorText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "d8bde0930b",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetError}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 47,
+                                    "bottomRow": 53,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 47,
+                                    "mobileBottomRow": 53,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "433ec28b42",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Не удалось проверить бюджет. {{appsmith.store.budgetError}}",
+                                    "fontSize": "0.875rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#DC2626",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "ResultHeader",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "1f6c30d56a",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 54,
+                                    "bottomRow": 58,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 54,
+                                    "mobileBottomRow": 58,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "03ecdfa3f2",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "{{CategorySelect.selectedOptionLabel}}, {{appsmith.store.budgetResult?.month}}",
+                                    "fontSize": "0.875rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#71717A",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "StatusText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "a7bb7d627d",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 58,
+                                    "bottomRow": 62,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 58,
+                                    "mobileBottomRow": 62,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "4f69f8dd93",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        },
+                                        {
+                                            "key": "textColor"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "{{Budget.STATUSES[appsmith.store.budgetResult?.status]?.label}}",
+                                    "fontSize": "1rem",
+                                    "fontStyle": "BOLD",
+                                    "textAlign": "LEFT",
+                                    "textColor": "{{Budget.STATUSES[appsmith.store.budgetResult?.status]?.color}}",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "UsedProgress",
+                                    "type": "PROGRESS_WIDGET",
+                                    "widgetId": "5c62aa8174",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 62,
+                                    "bottomRow": 66,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 62,
+                                    "mobileBottomRow": 66,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "a08e8d434d",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "progress"
+                                        },
+                                        {
+                                            "key": "fillColor"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "progressType": "linear",
+                                    "progress": "{{Math.min(appsmith.store.budgetResult?.percent_used ?? 0, 100)}}",
+                                    "showResult": false,
+                                    "steps": 1,
+                                    "isIndeterminate": false,
+                                    "fillColor": "{{Budget.STATUSES[appsmith.store.budgetResult?.status]?.color}}",
+                                    "counterClockwise": false,
+                                    "borderRadius": "0.375rem"
+                                },
+                                {
+                                    "widgetName": "PercentText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "bb5a31c246",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 66,
+                                    "bottomRow": 70,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 66,
+                                    "mobileBottomRow": 70,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "65698a5efd",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Использовано: {{Budget.formatPercent(appsmith.store.budgetResult?.percent_used ?? 0)}}",
+                                    "fontSize": "1rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#231F20",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "SpentText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "e9aa51ddac",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 70,
+                                    "bottomRow": 74,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 70,
+                                    "mobileBottomRow": 74,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "c11d126902",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Потрачено: {{Budget.formatAmount(appsmith.store.budgetResult?.spent ?? 0)}}",
+                                    "fontSize": "1rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#231F20",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                },
+                                {
+                                    "widgetName": "RemainingText",
+                                    "type": "TEXT_WIDGET",
+                                    "widgetId": "7f6f5166de",
+                                    "parentId": "0",
+                                    "renderMode": "CANVAS",
+                                    "isLoading": false,
+                                    "isVisible": "{{!!appsmith.store.budgetResult}}",
+                                    "animateLoading": true,
+                                    "version": 1,
+                                    "leftColumn": 1,
+                                    "rightColumn": 31,
+                                    "topRow": 74,
+                                    "bottomRow": 78,
+                                    "parentColumnSpace": 19.0,
+                                    "parentRowSpace": 10.0,
+                                    "mobileTopRow": 74,
+                                    "mobileBottomRow": 78,
+                                    "mobileLeftColumn": 1,
+                                    "mobileRightColumn": 31,
+                                    "key": "984306e5aa",
+                                    "dynamicBindingPathList": [
+                                        {
+                                            "key": "text"
+                                        },
+                                        {
+                                            "key": "isVisible"
+                                        }
+                                    ],
+                                    "dynamicTriggerPathList": [],
+                                    "dynamicPropertyPathList": [],
+                                    "text": "Осталось: {{Budget.formatAmount(appsmith.store.budgetResult?.remaining ?? 0)}}",
+                                    "fontSize": "1rem",
+                                    "fontStyle": "",
+                                    "textAlign": "LEFT",
+                                    "textColor": "#231F20",
+                                    "truncateButtonColor": "#553DE9",
+                                    "overflow": "NONE",
+                                    "shouldTruncate": false,
+                                    "borderColor": "#E0DEDE",
+                                    "borderWidth": "0",
+                                    "dynamicHeight": "FIXED",
+                                    "minDynamicHeight": 4,
+                                    "maxDynamicHeight": 9000
+                                }
+                            ]
+                        },
+                        "validOnPageLoadActions": true,
+                        "id": "Page1",
+                        "deleted": false,
+                        "policies": [],
+                        "userPermissions": [],
+                        "layoutOnLoadActions": []
+                    }
+                ],
+                "userPermissions": [],
+                "policyMap": {}
+            },
+            "gitSyncId": "6b0972b02a4b790e61be84bc_89b5e0a0-8694-4e3c-b2af-2c2262440fd7",
+            "deleted": false
+        }
+    ],
+    "actionList": [
+        {
+            "id": "Page1_Budget.validate",
+            "pluginType": "JS",
+            "pluginId": "js-plugin",
+            "unpublishedAction": {
+                "name": "validate",
+                "fullyQualifiedName": "Budget.validate",
+                "pluginType": "JS",
+                "pluginId": "js-plugin",
+                "actionConfiguration": {
+                    "timeoutInMillisecond": 10000,
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true,
+                    "body": "function (month, limitText) {\n    const errors = {};\n    if (!this.MONTH_PATTERN.test(month)) {\n      errors.month = \"Укажите месяц в формате ГГГГ-ММ\";\n    }\n    const limit = Number(limitText);\n    // At least one cent and whole cents only (contract after the review fix, task-05 F1/F2).\n    const wholeCents = Math.round(limit * 100) / 100 === limit;\n    if (limitText === \"\" || limitText === undefined || Number.isNaN(limit) || limit < this.MIN_LIMIT || limit > this.MAX_LIMIT || !wholeCents) {\n      errors.limit = \"Лимит должен быть больше 0 и не больше 1 000 000\";\n    }\n    return errors;\n  }",
+                    "jsArguments": [
+                        {
+                            "name": "month"
+                        },
+                        {
+                            "name": "limitText"
+                        }
+                    ]
+                },
+                "executeOnLoad": false,
+                "clientSideExecution": true,
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "isValid": true,
+                "invalids": [],
+                "messages": [],
+                "jsonPathKeys": [],
+                "confirmBeforeExecute": false,
+                "userPermissions": [],
+                "pageId": "Page1",
+                "collectionId": "Page1_Budget",
+                "runBehaviour": "MANUAL"
+            },
+            "publishedAction": {
+                "name": "validate",
+                "fullyQualifiedName": "Budget.validate",
+                "pluginType": "JS",
+                "pluginId": "js-plugin",
+                "actionConfiguration": {
+                    "timeoutInMillisecond": 10000,
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true,
+                    "body": "function (month, limitText) {\n    const errors = {};\n    if (!this.MONTH_PATTERN.test(month)) {\n      errors.month = \"Укажите месяц в формате ГГГГ-ММ\";\n    }\n    const limit = Number(limitText);\n    // At least one cent and whole cents only (contract after the review fix, task-05 F1/F2).\n    const wholeCents = Math.round(limit * 100) / 100 === limit;\n    if (limitText === \"\" || limitText === undefined || Number.isNaN(limit) || limit < this.MIN_LIMIT || limit > this.MAX_LIMIT || !wholeCents) {\n      errors.limit = \"Лимит должен быть больше 0 и не больше 1 000 000\";\n    }\n    return errors;\n  }",
+                    "jsArguments": [
+                        {
+                            "name": "month"
+                        },
+                        {
+                            "name": "limitText"
+                        }
+                    ]
+                },
+                "executeOnLoad": false,
+                "clientSideExecution": true,
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "isValid": true,
+                "invalids": [],
+                "messages": [],
+                "jsonPathKeys": [],
+                "confirmBeforeExecute": false,
+                "userPermissions": [],
+                "pageId": "Page1",
+                "collectionId": "Page1_Budget",
+                "runBehaviour": "MANUAL"
+            },
+            "gitSyncId": "12031bbd0f92410786e825d455a5929b"
+        },
+        {
+            "id": "Page1_Budget.calculate",
+            "pluginType": "JS",
+            "pluginId": "js-plugin",
+            "unpublishedAction": {
+                "name": "calculate",
+                "fullyQualifiedName": "Budget.calculate",
+                "pluginType": "JS",
+                "pluginId": "js-plugin",
+                "actionConfiguration": {
+                    "timeoutInMillisecond": 10000,
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true,
+                    "body": "function (expenses, month, limit) {\n    // \"2025-03-31\".slice(0, 7) === \"2025-03\": the 1st and the last day of the month are included.\n    const inMonth = expenses.filter((expense) => expense.date.slice(0, 7) === month);\n    const spent = Math.round(inMonth.reduce((sum, expense) => sum + expense.amount, 0) * 100) / 100;\n    const spentCents = Math.round(spent * 100);\n    const limitCents = Math.round(limit * 100);\n    let status = \"ok\";\n    if (spentCents > limitCents) {\n      status = \"over\";\n    } else if (spentCents * 100 >= limitCents * this.WARNING_PERCENT) {\n      status = \"warning\";\n    }\n    return {\n      month,\n      limit,\n      spent,\n      remaining: Math.round((limit - spent) * 100) / 100,\n      percent_used: Math.round((spent / limit) * 1000) / 10,\n      status,\n    };\n  }",
+                    "jsArguments": [
+                        {
+                            "name": "expenses"
+                        },
+                        {
+                            "name": "month"
+                        },
+                        {
+                            "name": "limit"
+                        }
+                    ]
+                },
+                "executeOnLoad": false,
+                "clientSideExecution": true,
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "isValid": true,
+                "invalids": [],
+                "messages": [],
+                "jsonPathKeys": [],
+                "confirmBeforeExecute": false,
+                "userPermissions": [],
+                "pageId": "Page1",
+                "collectionId": "Page1_Budget",
+                "runBehaviour": "MANUAL"
+            },
+            "publishedAction": {
+                "name": "calculate",
+                "fullyQualifiedName": "Budget.calculate",
+                "pluginType": "JS",
+                "pluginId": "js-plugin",
+                "actionConfiguration": {
+                    "timeoutInMillisecond": 10000,
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true,
+                    "body": "function (expenses, month, limit) {\n    // \"2025-03-31\".slice(0, 7) === \"2025-03\": the 1st and the last day of the month are included.\n    const inMonth = expenses.filter((expense) => expense.date.slice(0, 7) === month);\n    const spent = Math.round(inMonth.reduce((sum, expense) => sum + expense.amount, 0) * 100) / 100;\n    const spentCents = Math.round(spent * 100);\n    const limitCents = Math.round(limit * 100);\n    let status = \"ok\";\n    if (spentCents > limitCents) {\n      status = \"over\";\n    } else if (spentCents * 100 >= limitCents * this.WARNING_PERCENT) {\n      status = \"warning\";\n    }\n    return {\n      month,\n      limit,\n      spent,\n      remaining: Math.round((limit - spent) * 100) / 100,\n      percent_used: Math.round((spent / limit) * 1000) / 10,\n      status,\n    };\n  }",
+                    "jsArguments": [
+                        {
+                            "name": "expenses"
+                        },
+                        {
+                            "name": "month"
+                        },
+                        {
+                            "name": "limit"
+                        }
+                    ]
+                },
+                "executeOnLoad": false,
+                "clientSideExecution": true,
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "isValid": true,
+                "invalids": [],
+                "messages": [],
+                "jsonPathKeys": [],
+                "confirmBeforeExecute": false,
+                "userPermissions": [],
+                "pageId": "Page1",
+                "collectionId": "Page1_Budget",
+                "runBehaviour": "MANUAL"
+            },
+            "gitSyncId": "f10b78ff68794674aa8740a2a26f5b85"
+        },
+        {
+            "id": "Page1_Budget.check",
+            "pluginType": "JS",
+            "pluginId": "js-plugin",
+            "unpublishedAction": {
+                "name": "check",
+                "fullyQualifiedName": "Budget.check",
+                "pluginType": "JS",
+                "pluginId": "js-plugin",
+                "actionConfiguration": {
+                    "timeoutInMillisecond": 10000,
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true,
+                    "body": "async function () {\n    // An old result is never shown for new input.\n    await storeValue(\"budgetResult\", null);\n    await storeValue(\"budgetError\", \"\");\n    const month = (MonthInput.text || \"\").trim();\n    const errors = this.validate(month, LimitInput.text);\n    await storeValue(\"budgetErrors\", errors);\n    if (Object.keys(errors).length > 0) {\n      return;\n    }\n    try {\n      // Same filter as GET /api/expenses?category=…\n      const expenses = this.EXPENSES.filter((expense) => expense.category === CategorySelect.selectedOptionValue);\n      await storeValue(\"budgetResult\", this.calculate(expenses, month, Number(LimitInput.text)));\n    } catch (error) {\n      await storeValue(\"budgetError\", \"Не удалось выполнить проверку: \" + error.message);\n    }\n  }",
+                    "jsArguments": []
+                },
+                "executeOnLoad": false,
+                "clientSideExecution": true,
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "isValid": true,
+                "invalids": [],
+                "messages": [],
+                "jsonPathKeys": [],
+                "confirmBeforeExecute": false,
+                "userPermissions": [],
+                "pageId": "Page1",
+                "collectionId": "Page1_Budget",
+                "runBehaviour": "MANUAL"
+            },
+            "publishedAction": {
+                "name": "check",
+                "fullyQualifiedName": "Budget.check",
+                "pluginType": "JS",
+                "pluginId": "js-plugin",
+                "actionConfiguration": {
+                    "timeoutInMillisecond": 10000,
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true,
+                    "body": "async function () {\n    // An old result is never shown for new input.\n    await storeValue(\"budgetResult\", null);\n    await storeValue(\"budgetError\", \"\");\n    const month = (MonthInput.text || \"\").trim();\n    const errors = this.validate(month, LimitInput.text);\n    await storeValue(\"budgetErrors\", errors);\n    if (Object.keys(errors).length > 0) {\n      return;\n    }\n    try {\n      // Same filter as GET /api/expenses?category=…\n      const expenses = this.EXPENSES.filter((expense) => expense.category === CategorySelect.selectedOptionValue);\n      await storeValue(\"budgetResult\", this.calculate(expenses, month, Number(LimitInput.text)));\n    } catch (error) {\n      await storeValue(\"budgetError\", \"Не удалось выполнить проверку: \" + error.message);\n    }\n  }",
+                    "jsArguments": []
+                },
+                "executeOnLoad": false,
+                "clientSideExecution": true,
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "isValid": true,
+                "invalids": [],
+                "messages": [],
+                "jsonPathKeys": [],
+                "confirmBeforeExecute": false,
+                "userPermissions": [],
+                "pageId": "Page1",
+                "collectionId": "Page1_Budget",
+                "runBehaviour": "MANUAL"
+            },
+            "gitSyncId": "13db6784fd8a4dfcad29db2fde56d7b0"
+        },
+        {
+            "id": "Page1_Budget.formatAmount",
+            "pluginType": "JS",
+            "pluginId": "js-plugin",
+            "unpublishedAction": {
+                "name": "formatAmount",
+                "fullyQualifiedName": "Budget.formatAmount",
+                "pluginType": "JS",
+                "pluginId": "js-plugin",
+                "actionConfiguration": {
+                    "timeoutInMillisecond": 10000,
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true,
+                    "body": "function (value) {\n    return Number(value).toLocaleString(\"ru-RU\", { minimumFractionDigits: 2, maximumFractionDigits: 2 });\n  }",
+                    "jsArguments": [
+                        {
+                            "name": "value"
+                        }
+                    ]
+                },
+                "executeOnLoad": false,
+                "clientSideExecution": true,
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "isValid": true,
+                "invalids": [],
+                "messages": [],
+                "jsonPathKeys": [],
+                "confirmBeforeExecute": false,
+                "userPermissions": [],
+                "pageId": "Page1",
+                "collectionId": "Page1_Budget",
+                "runBehaviour": "MANUAL"
+            },
+            "publishedAction": {
+                "name": "formatAmount",
+                "fullyQualifiedName": "Budget.formatAmount",
+                "pluginType": "JS",
+                "pluginId": "js-plugin",
+                "actionConfiguration": {
+                    "timeoutInMillisecond": 10000,
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true,
+                    "body": "function (value) {\n    return Number(value).toLocaleString(\"ru-RU\", { minimumFractionDigits: 2, maximumFractionDigits: 2 });\n  }",
+                    "jsArguments": [
+                        {
+                            "name": "value"
+                        }
+                    ]
+                },
+                "executeOnLoad": false,
+                "clientSideExecution": true,
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "isValid": true,
+                "invalids": [],
+                "messages": [],
+                "jsonPathKeys": [],
+                "confirmBeforeExecute": false,
+                "userPermissions": [],
+                "pageId": "Page1",
+                "collectionId": "Page1_Budget",
+                "runBehaviour": "MANUAL"
+            },
+            "gitSyncId": "2a82f4ded96a403d8d8bf4f69075e7bc"
+        },
+        {
+            "id": "Page1_Budget.formatPercent",
+            "pluginType": "JS",
+            "pluginId": "js-plugin",
+            "unpublishedAction": {
+                "name": "formatPercent",
+                "fullyQualifiedName": "Budget.formatPercent",
+                "pluginType": "JS",
+                "pluginId": "js-plugin",
+                "actionConfiguration": {
+                    "timeoutInMillisecond": 10000,
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true,
+                    "body": "function (value) {\n    return Number(value).toLocaleString(\"ru-RU\", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + \" %\";\n  }",
+                    "jsArguments": [
+                        {
+                            "name": "value"
+                        }
+                    ]
+                },
+                "executeOnLoad": false,
+                "clientSideExecution": true,
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "isValid": true,
+                "invalids": [],
+                "messages": [],
+                "jsonPathKeys": [],
+                "confirmBeforeExecute": false,
+                "userPermissions": [],
+                "pageId": "Page1",
+                "collectionId": "Page1_Budget",
+                "runBehaviour": "MANUAL"
+            },
+            "publishedAction": {
+                "name": "formatPercent",
+                "fullyQualifiedName": "Budget.formatPercent",
+                "pluginType": "JS",
+                "pluginId": "js-plugin",
+                "actionConfiguration": {
+                    "timeoutInMillisecond": 10000,
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true,
+                    "body": "function (value) {\n    return Number(value).toLocaleString(\"ru-RU\", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + \" %\";\n  }",
+                    "jsArguments": [
+                        {
+                            "name": "value"
+                        }
+                    ]
+                },
+                "executeOnLoad": false,
+                "clientSideExecution": true,
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "isValid": true,
+                "invalids": [],
+                "messages": [],
+                "jsonPathKeys": [],
+                "confirmBeforeExecute": false,
+                "userPermissions": [],
+                "pageId": "Page1",
+                "collectionId": "Page1_Budget",
+                "runBehaviour": "MANUAL"
+            },
+            "gitSyncId": "cd6c2171eae74d4aaa2e72437312b358"
+        }
+    ],
+    "actionCollectionList": [
+        {
+            "id": "Page1_Budget",
+            "unpublishedCollection": {
+                "name": "Budget",
+                "pageId": "Page1",
+                "pluginId": "js-plugin",
+                "pluginType": "JS",
+                "actions": [],
+                "archivedActions": [],
+                "body": "export default {\n  // Static copy of the fixture (fictional data) — replaces the REST query GetExpenses.\n  EXPENSES: [\n    { date: \"2025-02-28\", category: \"food\", amount: 20.0, description: \"Продукты (конец февраля)\" },\n    { date: \"2025-03-01\", category: \"food\", amount: 30.0, description: \"Завтрак в кафе\" },\n    { date: \"2025-03-15\", category: \"food\", amount: 45.5, description: \"Продукты на неделю\" },\n    { date: \"2025-03-31\", category: \"food\", amount: 4.5, description: \"Кофе\" },\n    { date: \"2025-04-01\", category: \"food\", amount: 15.0, description: \"Обед (начало апреля)\" },\n    { date: \"2025-03-10\", category: \"transport\", amount: 18.4, description: \"Такси до вокзала\" },\n  ],\n  MONTH_PATTERN: /^[1-9]\\d{3}-(0[1-9]|1[0-2])$/,\n  MIN_LIMIT: 0.01,\n  MAX_LIMIT: 1000000,\n  WARNING_PERCENT: 80,\n  STATUSES: {\n    ok: { label: \"В пределах бюджета\", color: \"#16a34a\" },\n    warning: { label: \"Близко к лимиту\", color: \"#d97706\" },\n    over: { label: \"Бюджет превышен\", color: \"#dc2626\" },\n  },\n\n  // Validation: returns { month?: message, limit?: message }.\n  validate(month, limitText) {\n    const errors = {};\n    if (!this.MONTH_PATTERN.test(month)) {\n      errors.month = \"Укажите месяц в формате ГГГГ-ММ\";\n    }\n    const limit = Number(limitText);\n    // At least one cent and whole cents only (contract after the review fix, task-05 F1/F2).\n    const wholeCents = Math.round(limit * 100) / 100 === limit;\n    if (limitText === \"\" || limitText === undefined || Number.isNaN(limit) || limit < this.MIN_LIMIT || limit > this.MAX_LIMIT || !wholeCents) {\n      errors.limit = \"Лимит должен быть больше 0 и не больше 1 000 000\";\n    }\n    return errors;\n  },\n\n  // Core logic: pure function over the expense list of one category.\n  calculate(expenses, month, limit) {\n    // \"2025-03-31\".slice(0, 7) === \"2025-03\": the 1st and the last day of the month are included.\n    const inMonth = expenses.filter((expense) => expense.date.slice(0, 7) === month);\n    const spent = Math.round(inMonth.reduce((sum, expense) => sum + expense.amount, 0) * 100) / 100;\n    const spentCents = Math.round(spent * 100);\n    const limitCents = Math.round(limit * 100);\n    let status = \"ok\";\n    if (spentCents > limitCents) {\n      status = \"over\";\n    } else if (spentCents * 100 >= limitCents * this.WARNING_PERCENT) {\n      status = \"warning\";\n    }\n    return {\n      month,\n      limit,\n      spent,\n      remaining: Math.round((limit - spent) * 100) / 100,\n      percent_used: Math.round((spent / limit) * 1000) / 10,\n      status,\n    };\n  },\n\n  // Button \"Проверить\" → onClick: {{Budget.check()}}\n  async check() {\n    // An old result is never shown for new input.\n    await storeValue(\"budgetResult\", null);\n    await storeValue(\"budgetError\", \"\");\n    const month = (MonthInput.text || \"\").trim();\n    const errors = this.validate(month, LimitInput.text);\n    await storeValue(\"budgetErrors\", errors);\n    if (Object.keys(errors).length > 0) {\n      return;\n    }\n    try {\n      // Same filter as GET /api/expenses?category=…\n      const expenses = this.EXPENSES.filter((expense) => expense.category === CategorySelect.selectedOptionValue);\n      await storeValue(\"budgetResult\", this.calculate(expenses, month, Number(LimitInput.text)));\n    } catch (error) {\n      await storeValue(\"budgetError\", \"Не удалось выполнить проверку: \" + error.message);\n    }\n  },\n\n  // User-facing output helpers.\n  formatAmount(value) {\n    return Number(value).toLocaleString(\"ru-RU\", { minimumFractionDigits: 2, maximumFractionDigits: 2 });\n  },\n  formatPercent(value) {\n    return Number(value).toLocaleString(\"ru-RU\", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + \" %\";\n  },\n};\n",
+                "variables": [
+                    {
+                        "name": "EXPENSES",
+                        "value": "[\n    { date: \"2025-02-28\", category: \"food\", amount: 20.0, description: \"Продукты (конец февраля)\" },\n    { date: \"2025-03-01\", category: \"food\", amount: 30.0, description: \"Завтрак в кафе\" },\n    { date: \"2025-03-15\", category: \"food\", amount: 45.5, description: \"Продукты на неделю\" },\n    { date: \"2025-03-31\", category: \"food\", amount: 4.5, description: \"Кофе\" },\n    { date: \"2025-04-01\", category: \"food\", amount: 15.0, description: \"Обед (начало апреля)\" },\n    { date: \"2025-03-10\", category: \"transport\", amount: 18.4, description: \"Такси до вокзала\" },\n  ]"
+                    },
+                    {
+                        "name": "MONTH_PATTERN",
+                        "value": "/^[1-9]\\d{3}-(0[1-9]|1[0-2])$/"
+                    },
+                    {
+                        "name": "MIN_LIMIT",
+                        "value": "0.01"
+                    },
+                    {
+                        "name": "MAX_LIMIT",
+                        "value": "1000000"
+                    },
+                    {
+                        "name": "WARNING_PERCENT",
+                        "value": "80"
+                    },
+                    {
+                        "name": "STATUSES",
+                        "value": "{\n    ok: { label: \"В пределах бюджета\", color: \"#16a34a\" },\n    warning: { label: \"Близко к лимиту\", color: \"#d97706\" },\n    over: { label: \"Бюджет превышен\", color: \"#dc2626\" },\n  }"
+                    }
+                ],
+                "userPermissions": []
+            },
+            "publishedCollection": {
+                "name": "Budget",
+                "pageId": "Page1",
+                "pluginId": "js-plugin",
+                "pluginType": "JS",
+                "actions": [],
+                "archivedActions": [],
+                "body": "export default {\n  // Static copy of the fixture (fictional data) — replaces the REST query GetExpenses.\n  EXPENSES: [\n    { date: \"2025-02-28\", category: \"food\", amount: 20.0, description: \"Продукты (конец февраля)\" },\n    { date: \"2025-03-01\", category: \"food\", amount: 30.0, description: \"Завтрак в кафе\" },\n    { date: \"2025-03-15\", category: \"food\", amount: 45.5, description: \"Продукты на неделю\" },\n    { date: \"2025-03-31\", category: \"food\", amount: 4.5, description: \"Кофе\" },\n    { date: \"2025-04-01\", category: \"food\", amount: 15.0, description: \"Обед (начало апреля)\" },\n    { date: \"2025-03-10\", category: \"transport\", amount: 18.4, description: \"Такси до вокзала\" },\n  ],\n  MONTH_PATTERN: /^[1-9]\\d{3}-(0[1-9]|1[0-2])$/,\n  MIN_LIMIT: 0.01,\n  MAX_LIMIT: 1000000,\n  WARNING_PERCENT: 80,\n  STATUSES: {\n    ok: { label: \"В пределах бюджета\", color: \"#16a34a\" },\n    warning: { label: \"Близко к лимиту\", color: \"#d97706\" },\n    over: { label: \"Бюджет превышен\", color: \"#dc2626\" },\n  },\n\n  // Validation: returns { month?: message, limit?: message }.\n  validate(month, limitText) {\n    const errors = {};\n    if (!this.MONTH_PATTERN.test(month)) {\n      errors.month = \"Укажите месяц в формате ГГГГ-ММ\";\n    }\n    const limit = Number(limitText);\n    // At least one cent and whole cents only (contract after the review fix, task-05 F1/F2).\n    const wholeCents = Math.round(limit * 100) / 100 === limit;\n    if (limitText === \"\" || limitText === undefined || Number.isNaN(limit) || limit < this.MIN_LIMIT || limit > this.MAX_LIMIT || !wholeCents) {\n      errors.limit = \"Лимит должен быть больше 0 и не больше 1 000 000\";\n    }\n    return errors;\n  },\n\n  // Core logic: pure function over the expense list of one category.\n  calculate(expenses, month, limit) {\n    // \"2025-03-31\".slice(0, 7) === \"2025-03\": the 1st and the last day of the month are included.\n    const inMonth = expenses.filter((expense) => expense.date.slice(0, 7) === month);\n    const spent = Math.round(inMonth.reduce((sum, expense) => sum + expense.amount, 0) * 100) / 100;\n    const spentCents = Math.round(spent * 100);\n    const limitCents = Math.round(limit * 100);\n    let status = \"ok\";\n    if (spentCents > limitCents) {\n      status = \"over\";\n    } else if (spentCents * 100 >= limitCents * this.WARNING_PERCENT) {\n      status = \"warning\";\n    }\n    return {\n      month,\n      limit,\n      spent,\n      remaining: Math.round((limit - spent) * 100) / 100,\n      percent_used: Math.round((spent / limit) * 1000) / 10,\n      status,\n    };\n  },\n\n  // Button \"Проверить\" → onClick: {{Budget.check()}}\n  async check() {\n    // An old result is never shown for new input.\n    await storeValue(\"budgetResult\", null);\n    await storeValue(\"budgetError\", \"\");\n    const month = (MonthInput.text || \"\").trim();\n    const errors = this.validate(month, LimitInput.text);\n    await storeValue(\"budgetErrors\", errors);\n    if (Object.keys(errors).length > 0) {\n      return;\n    }\n    try {\n      // Same filter as GET /api/expenses?category=…\n      const expenses = this.EXPENSES.filter((expense) => expense.category === CategorySelect.selectedOptionValue);\n      await storeValue(\"budgetResult\", this.calculate(expenses, month, Number(LimitInput.text)));\n    } catch (error) {\n      await storeValue(\"budgetError\", \"Не удалось выполнить проверку: \" + error.message);\n    }\n  },\n\n  // User-facing output helpers.\n  formatAmount(value) {\n    return Number(value).toLocaleString(\"ru-RU\", { minimumFractionDigits: 2, maximumFractionDigits: 2 });\n  },\n  formatPercent(value) {\n    return Number(value).toLocaleString(\"ru-RU\", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + \" %\";\n  },\n};\n",
+                "variables": [
+                    {
+                        "name": "EXPENSES",
+                        "value": "[\n    { date: \"2025-02-28\", category: \"food\", amount: 20.0, description: \"Продукты (конец февраля)\" },\n    { date: \"2025-03-01\", category: \"food\", amount: 30.0, description: \"Завтрак в кафе\" },\n    { date: \"2025-03-15\", category: \"food\", amount: 45.5, description: \"Продукты на неделю\" },\n    { date: \"2025-03-31\", category: \"food\", amount: 4.5, description: \"Кофе\" },\n    { date: \"2025-04-01\", category: \"food\", amount: 15.0, description: \"Обед (начало апреля)\" },\n    { date: \"2025-03-10\", category: \"transport\", amount: 18.4, description: \"Такси до вокзала\" },\n  ]"
+                    },
+                    {
+                        "name": "MONTH_PATTERN",
+                        "value": "/^[1-9]\\d{3}-(0[1-9]|1[0-2])$/"
+                    },
+                    {
+                        "name": "MIN_LIMIT",
+                        "value": "0.01"
+                    },
+                    {
+                        "name": "MAX_LIMIT",
+                        "value": "1000000"
+                    },
+                    {
+                        "name": "WARNING_PERCENT",
+                        "value": "80"
+                    },
+                    {
+                        "name": "STATUSES",
+                        "value": "{\n    ok: { label: \"В пределах бюджета\", color: \"#16a34a\" },\n    warning: { label: \"Близко к лимиту\", color: \"#d97706\" },\n    over: { label: \"Бюджет превышен\", color: \"#dc2626\" },\n  }"
+                    }
+                ],
+                "userPermissions": []
+            },
+            "gitSyncId": "e4c904abc7ac43d8ba1b47a234e144a5"
+        }
+    ],
+    "editModeTheme": {
+        "name": "Default-New",
+        "displayName": "Modern",
+        "isSystemTheme": true,
+        "deleted": false
+    },
+    "publishedTheme": {
+        "name": "Default-New",
+        "displayName": "Modern",
+        "isSystemTheme": true,
+        "deleted": false
+    }
+}
