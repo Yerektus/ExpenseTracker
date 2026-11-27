@@ -1,12 +1,20 @@
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
 
 from app import crud
 from app.database import get_db
 from app.models import Expense
-from app.schemas import Category, ExpenseCreate, ExpenseRead, ExpenseUpdate, Summary
+from app.schemas import (
+    BudgetCheck,
+    BudgetCheckQuery,
+    Category,
+    ExpenseCreate,
+    ExpenseRead,
+    ExpenseUpdate,
+    Summary,
+)
 
 router = APIRouter(prefix="/api", tags=["expenses"])
 
@@ -48,3 +56,9 @@ def delete_expense(expense_id: int, db: DbSession):
 @router.get("/summary", response_model=Summary)
 def read_summary(db: DbSession):
     return crud.get_summary(db)
+
+
+@router.get("/budget-check", response_model=BudgetCheck)
+def read_budget_check(params: Annotated[BudgetCheckQuery, Query()], db: DbSession):
+    """Только чтение: сколько потрачено в категории за месяц относительно лимита."""
+    return crud.get_budget_check(db, params)

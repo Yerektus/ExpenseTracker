@@ -14,11 +14,13 @@ import { ArrowRotateLeft, Wallet } from "@gravity-ui/icons";
 import {
   createExpense,
   deleteExpense,
+  fetchBudgetCheck,
   fetchExpenses,
   fetchSummary,
   updateExpense,
 } from "./api.js";
 import { CATEGORIES } from "./categories.js";
+import BudgetCheck from "./components/BudgetCheck.jsx";
 import ExpenseForm from "./components/ExpenseForm.jsx";
 import ExpenseList, { ExpenseListSkeleton } from "./components/ExpenseList.jsx";
 import Summary from "./components/Summary.jsx";
@@ -36,6 +38,11 @@ export default function App() {
   const [error, setError] = useState("");
   // Увеличивается, когда данные нужно загрузить заново (после сохранения, удаления, «Повторить»).
   const [reloadCount, setReloadCount] = useState(0);
+  // Проверка бюджета: параметры последней проверки (null — проверки ещё не было) и её результат.
+  const [budgetQuery, setBudgetQuery] = useState(null);
+  const [budgetResult, setBudgetResult] = useState(null);
+  const [budgetError, setBudgetError] = useState("");
+  const [isBudgetChecking, setIsBudgetChecking] = useState(false);
 
   // Загрузка списка и сводки. Состояние меняется только в колбэках промиса,
   // а ответ устаревшего запроса (фильтр уже сменился) игнорируется.
@@ -64,6 +71,51 @@ export default function App() {
       ignore = true;
     };
   }, [categoryFilter, reloadCount]);
+
+  // Проверка бюджета повторяется после каждого изменения расходов (reloadCount),
+  // поэтому карточка не показывает устаревшие цифры. Ответ устаревшего запроса игнорируется.
+  useEffect(() => {
+    if (budgetQuery === null) {
+      return undefined;
+    }
+    let ignore = false;
+    fetchBudgetCheck(budgetQuery)
+      .then((result) => {
+        if (!ignore) {
+          setBudgetResult(result);
+          setBudgetError("");
+        }
+      })
+      .catch((checkError) => {
+        if (!ignore) {
+          setBudgetResult(null);
+          setBudgetError(checkError.message);
+        }
+      })
+      .finally(() => {
+        if (!ignore) {
+          setIsBudgetChecking(false);
+        }
+      });
+    return () => {
+      ignore = true;
+    };
+  }, [budgetQuery, reloadCount]);
+
+  function handleBudgetCheck(query) {
+    setBudgetResult(null);
+    setBudgetError("");
+    setIsBudgetChecking(true);
+    // Новый объект — чтобы повторная проверка с теми же значениями тоже ушла на сервер.
+    setBudgetQuery({ ...query });
+  }
+
+  function handleBudgetClear() {
+    setBudgetQuery(null);
+    setBudgetResult(null);
+    setBudgetError("");
+    setIsBudgetChecking(false);
+  }
 
   function reloadData() {
     setIsLoading(true);
@@ -151,6 +203,13 @@ export default function App() {
               onCancel={() => setEditingExpense(null)}
             />
             <Summary summary={summary} />
+            <BudgetCheck
+              result={budgetResult}
+              error={budgetError}
+              isChecking={isBudgetChecking}
+              onCheck={handleBudgetCheck}
+              onClear={handleBudgetClear}
+            />
           </aside>
 
           <Card>

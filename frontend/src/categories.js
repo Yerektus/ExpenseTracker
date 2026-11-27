@@ -26,3 +26,13 @@ export function formatDate(isoDate) {
   const [year, month, day] = isoDate.split("-");
   return `${day}.${month}.${year}`;
 }
+
+const percentFormatter = new Intl.NumberFormat("ru-RU", {
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 1,
+});
+
+/** 80 -> "80,0 %" */
+export function formatPercent(percent) {
+  return `${percentFormatter.format(Number(percent))} %`;
+}

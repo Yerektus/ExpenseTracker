@@ -13,7 +13,7 @@ export default [
       sourceType: "module",
       parserOptions: { ecmaFeatures: { jsx: true } },
       // Браузерные глобальные переменные, которые использует код.
-      globals: { window: "readonly", document: "readonly", fetch: "readonly" },
+      globals: { window: "readonly", document: "readonly", fetch: "readonly", URLSearchParams: "readonly" },
     },
   },
   {
